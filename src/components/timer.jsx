@@ -48,11 +48,23 @@ const Timer = ({ timeLeft, setTimeLeft, onTimerEnd, isPaused }) => {
           cy="18"
           strokeDasharray={circumference}
           strokeDashoffset={offset}
+          style={{
+            transition: "stroke-dashoffset 1s linear", // Плавная анимация
+          }}
         />
       </svg>
       {/* Текст таймера */}
       <span className="absolute text-lg font-bold text-white">
-        {timeLeft}s
+        <svg 
+        version="1.1" 
+        id="Layer_1" 
+        xmlns="http://www.w3.org/2000/svg" 
+        x="0px" y="0px"
+        className="w-4 h-4 fill-yellow-600"
+        viewBox="0 0 122.88 122.88" enable-background="new 0 0 122.88 122.88"
+        >
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M61.438,0c33.93,0,61.441,27.512,61.441,61.441 c0,33.929-27.512,61.438-61.441,61.438C27.512,122.88,0,95.37,0,61.441C0,27.512,27.512,0,61.438,0L61.438,0z"/>
+            </svg>
       </span>
     </div>
   );

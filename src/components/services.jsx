@@ -25,15 +25,54 @@ const Services = () => {
             КОМПЛЕКС УСЛУГ
           </h3>
           {/* Стрелка */}
-          <div className="flex items-center mt-8 group">
-            <div className="h-px w-24 mt-2 mb-36 bg-yellow-500 relative group-hover:translate-x-1 transform transition-transform duration-300 ease-in-out">
-              <div className="absolute -top-6 -right-12 group-hover:translate-x-1 transform transition-transform duration-300 ease-in-out">
-                <div className="rounded-full border border-yellow-500 w-12 h-12 flex items-center justify-center">
-                  <span className="text-yellow-500 ">&rarr;</span>
+          <button className="mb-36">
+            <div className="absolute right-0 overflow-hidden">
+            <div className="relative w-48 h-4 group">
+                {/* Линия */}
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1024 120"
+                    className="absolute top-0 left-2 w-full h-full text-yellow-500"
+                    fill="currentColor"
+                >
+                    <line
+                    x1="0"
+                    y1="50%"
+                    x2="100%"
+                    y2="50%"
+                    stroke="currentColor"
+                    strokeWidth="5"
+                    />
+                </svg>
+
+
+                {/* Стрелка на конце */}
+                <div className="absolute top-1/2 right-3 -translate-y-1/2 transform scale-75 text-yellow-500">
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    shapeRendering="geometricPrecision"
+                    textRendering="geometricPrecision"
+                    imageRendering="optimizeQuality"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    viewBox="0 0 267 512.43"
+                    stroke="currentColor"
+                    strokeWidth="5"
+                    className="w-5 h-5"
+                    >
+                    <path
+                        fill="currentColor"
+                        fillRule="nonzero"
+                        d="M3.22 18.9c-4.28-4.3-4.3-11.31-.04-15.64s11.2-4.35 15.48-.04l245.12 245.16c4.28 4.3 4.3 11.31.04 15.64L18.66 509.22a10.874 10.874 0 0 1-15.48-.05c-4.26-4.33-4.24-11.33.04-15.63L240.5 256.22 3.22 18.9z"
+                    />
+                    </svg>
                 </div>
-              </div>
-            </div>
-          </div>
+                <div
+                className={`absolute top-1/2 left-8 -translate-y-1/2 w-1.5 h-1.5 bg-yellow-500 rounded-full transform transition-transform duration-500 ease-out group-hover:translate-x-24`}
+                ></div>
+                </div>
+                </div>
+                </button>
         </div>
         <div className="mt-[750px] mr-24 -ml-20 text-left text-gray-600 text-md max-w-3xl">
         <p className="container flex bg-white px-6 py-4">

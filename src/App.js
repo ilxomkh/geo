@@ -5,6 +5,7 @@ import Navbar from './components/navbar';
 import YellowSection from './components/ysection';
 import Services from './components/services';
 import PressCenter from './components/PressCenter';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -15,9 +16,7 @@ function App() {
         <YellowSection />
         <Services />
         <PressCenter />
-      <div style={{ height: "2000px", backgroundColor: "#f5f5f5" }}>
-        <h1>Другой контент страницы</h1>
-      </div>
+        <Footer />
       </div>
     </div>
   );

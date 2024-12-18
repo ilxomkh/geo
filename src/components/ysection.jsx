@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Timer from "./timer.jsx";
-import aboutUsImg from "../images/aboutUsImg.webp";
-import ex from "../images/ex.webp";
-import partners from "../images/partners.webp";
-import cons from "../images/cons.webp";
-import tpi from "../images/tpi.webp";
-import media from "../images/media.webp";
+import aboutUsImg from "../images/aboutUsImg.jpg";
+import ex from "../images/ex.jpg";
+import partners from "../images/partners.jpg";
+import cons from "../images/cons.jpg";
+import tpi from "../images/tpi.jpg";
+import media from "../images/media.jpg";
 
 const YellowSection = () => {
   const [timeLeft, setTimeLeft] = useState(10);
