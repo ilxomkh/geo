@@ -4,6 +4,7 @@ import AntiFraudBanner from './components/warning';
 import Navbar from './components/navbar';
 import YellowSection from './components/ysection';
 import Services from './components/services';
+import PressCenter from './components/PressCenter';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
         <YellowSection />
         <Services />
+        <PressCenter />
       <div style={{ height: "2000px", backgroundColor: "#f5f5f5" }}>
         <h1>Другой контент страницы</h1>
       </div>
