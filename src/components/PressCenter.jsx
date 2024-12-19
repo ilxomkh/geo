@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import img1 from "../images/news1.jpg"; // Подставьте свои изображения
 import img2 from "../images/news2.jpg";
 import img3 from "../images/news3.jpg";
@@ -7,47 +8,64 @@ import img4 from "../images/news4.jpg";
 const PressCenter = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
+  const navigate = useNavigate();
 
 
   const newsItems = [
     {
-      date: "06.12.2024",
-      title: "Росгеология выявила в Якутии прогнозные ресурсы рудного золота более 145 тонн",
-      image: img1,
-    },
-    {
-      date: "07.11.2024",
-      title: "Глава Роснедра встретился с топ-менеджментом Росгеологии",
-      image: img2,
-    },
-    {
-      date: "31.10.2024",
-      title: "Росгеология подтвердила лидерство в Антикоррупционном рейтинге РСПП",
-      image: img3,
-    },
-    {
-      date: "15.10.2024",
-      title: "Информационное сообщение",
-      image: img4,
-    },
-    {
+        id: 1,
+        date: "06.12.2024",
+        title: "Росгеология выявила в Якутии прогнозные ресурсы рудного золота более 145 тонн",
+        description: "Подробное описание первой новости...",
+        image: img1,
+      },
+      {
+        id: 2,
         date: "07.11.2024",
         title: "Глава Роснедра встретился с топ-менеджментом Росгеологии",
+        description: "Подробное описание второй новости...",
         image: img2,
       },
       {
+        id: 3,
         date: "31.10.2024",
         title: "Росгеология подтвердила лидерство в Антикоррупционном рейтинге РСПП",
+        description: "Подробное описание третьей новости...",
         image: img3,
       },
       {
+        id: 4,
         date: "15.10.2024",
         title: "Информационное сообщение",
+        description: "Подробное описание четвертой новости...",
+        image: img4,
+      },
+    {
+        id: 5,
+        date: "07.11.2024",
+        title: "Глава Роснедра встретился с топ-менеджментом Росгеологии",
+        description: "Подробное описание третьей новости...",
+        image: img2,
+      },
+      {
+        id: 6,
+        date: "31.10.2024",
+        title: "Росгеология подтвердила лидерство в Антикоррупционном рейтинге РСПП",
+        description: "Подробное описание третьей новости...",
+        image: img3,
+      },
+      {
+        id: 7,
+        date: "15.10.2024",
+        title: "Информационное сообщение",
+        description: "Подробное описание третьей новости...",
         image: img4,
       },
       {
+        id: 8,
         date: "07.11.2024",
         title: "Глава Роснедра встретился с топ-менеджментом Росгеологии",
+        description: "Подробное описание третьей новости...",
         image: img2,
       },
   ];
@@ -67,6 +85,10 @@ const PressCenter = () => {
     
       const prevPage = () => {
         setCurrentPage((prev) => (prev > 1 ? prev - 1 : prev));
+      };
+
+      const handleNewsClick = (id) => {
+        navigate(`/news/${id}`);
       };
       
 
@@ -190,9 +212,10 @@ const PressCenter = () => {
             {currentNews.map((item, index) => (
             <div
                 key={index}
-                className="group bg-gray-50 relative cursor-pointer hover:shadow-xl hover:bg-gray-50 transition-all duration-500"
+                className="group bg-gray-50 relative cursor-pointer hover:shadow-2xl hover:bg-white transition-all duration-500"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
+                onClick={() => handleNewsClick(item.id)}
             >
             {/* Изображение */}
             <img

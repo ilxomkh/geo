@@ -49,13 +49,13 @@ const YellowSection = () => {
 
       {/* Жёлтая полупрозрачная секция */}
       <div
-        className="absolute top-24 right-0 bg-yellow-400 bg-opacity-90 w-2/3 flex flex-col justify-center px-8 transition-all duration-700 ease-in-out"
+        className="absolute top-28 right-0 bg-yellow-400 bg-opacity-90 w-2/3 flex flex-col justify-center px-8 transition-all duration-700 ease-in-out"
         style={{ height: `${data[dataIndex].height}px` }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
         {/* Верхнее меню */}
-        <div className="absolute top-12 right-12 flex space-x-10 text-white text-xl uppercase font-medium">
+        <div className="absolute top-12 right-28 flex space-x-10 text-white font-oswald text-xl uppercase font-medium">
           {["Кто мы?", "ТПИ", "Экспертиза", "Партнерство", "Консалтинг", "Медиа"].map((item, index) => (
             <span
               key={index}
@@ -73,10 +73,10 @@ const YellowSection = () => {
 
         {/* Контент */}
         <div className="flex flex-col items-start justify-start px-8">
-          <h1 className="text-4xl font-bold mt-8 leading-tight mb-4 text-white text-left">
+          <h1 className="text-4xl font-bold font-oswald mt-8 leading-tight mb-4 text-white text-left">
             {data[dataIndex].title}
           </h1>
-          <p className="text-lg font-medium text-white text-left">
+          <p className="text-lg font-medium font-oswald text-white text-left">
             {data[dataIndex].subtitle}
           </p>
         </div>
@@ -85,7 +85,7 @@ const YellowSection = () => {
         <div className="relative mt-4">
           <Link
             to={data[dataIndex].link}
-            className={`flex items-center space-x-2 text-white font-medium transition-opacity duration-500 ${
+            className={`flex items-center space-x-2 text-white font-oswald font-medium transition-opacity duration-500 ${
               hovered ? "opacity-100" : "opacity-0"
             }`}
             style={{ position: "absolute", top: "40px", left: "380px" }}

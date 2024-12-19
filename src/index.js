@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom/client';
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
 } from 'react-router-dom';
 import './index.css';
 import App from './App';
@@ -14,6 +12,7 @@ import Consulting from './pages/cons';
 import Expertise from './pages/ex';
 import Partners from './pages/partners';
 import Media from './pages/media';
+import NewsDetail from './pages/NewsDetail';
 
 const router = createBrowserRouter([
   {
@@ -33,7 +32,7 @@ const router = createBrowserRouter([
     element: <Consulting />,
   },
   {
-    path: 'ex',
+    path: '/ex',
     element: <Expertise />,
   },
   {
@@ -43,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: '/media',
     element: <Media />,
+  },
+  {
+    path: '/news/:id',
+    element: <NewsDetail />,
   },
 ]);
 
