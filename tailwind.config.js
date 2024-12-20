@@ -3,15 +3,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        chevron: `
-          repeating-linear-gradient(
-            45deg,
-            #fff6d9 0,
-            #fff6d9 12px,
-            #ffeaa7 12px,
-            #ffeaa7 24px
-          )
-        `,
+        chevron: "url('./images/antiFraud.svg')",
       },
       fontFamily: {
         oswald: ["Oswald", "sans-serif"],
@@ -32,5 +24,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwind-scrollbar-hide')],
+  plugins: [require("tailwind-scrollbar-hide")],
 };

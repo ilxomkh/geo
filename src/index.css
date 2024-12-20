@@ -18,3 +18,60 @@ code {
 @import "@fontsource/oswald/400.css"; /* Для веса 400 */
 @import "@fontsource/oswald/700.css"; /* Для веса 700 */
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn ease-out forwards;
+}
+
+.animate-fadeSlideUp {
+  animation: fadeSlideUp ease-out forwards;
+}
+
+.animate-fadeSlideRight {
+  animation: fadeSlideRight ease-out forwards;
+}
+@keyframes bounceY {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px); /* Поднимается вверх */
+  }
+  100% {
+    transform: translateY(0); /* Возвращается вниз */
+  }
+}
+
+.animate-bounceY {
+  animation: bounceY 1.5s infinite ease-in-out; /* Бесконечная анимация */
+}
