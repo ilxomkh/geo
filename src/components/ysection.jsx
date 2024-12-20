@@ -130,8 +130,8 @@ const YellowSection = () => {
             isPaused={isPaused}
           />
         </div>
-        <div className="p-10 w-80 absolute top-64 right-10">
-      <h1 className="text-white text-lg font-bold font-oswald text-right mb-2 mt-2">НОВОСТИ</h1>
+        <div className="p-10 w-80 absolute top-72 right-10">
+      <h1 className="text-white text-lg font-bold font-oswald text-right mt-2">НОВОСТИ</h1>
       <NewsTimeline news={newsData} />
     </div>
       </div>

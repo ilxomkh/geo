@@ -14,8 +14,6 @@ const NewsTimeline = ({ news }) => {
 
   return (
     <div className="relative flex flex-col items-start h-full max-h-60 overflow-hidden">
-      {/* Контейнер с прокруткой */}
-      <div className="relative h-full max-h-96 overflow-y-auto">
         {/* Линия шкалы */}
         <div className="absolute left-2 -top-10 bottom-0 w-px bg-yellow-400"></div>
 
@@ -23,7 +21,7 @@ const NewsTimeline = ({ news }) => {
         {news.map((item, index) => (
           <div
             key={index}
-            className="relative mb-10 mt-8 pl-8"
+            className="relative mb-10 mt-3 pl-8"
             onMouseEnter={() => handleMouseEnter(index)} // Наведение мыши
             onMouseLeave={handleMouseLeave} // Уход мыши
           >
@@ -53,7 +51,6 @@ const NewsTimeline = ({ news }) => {
           </div>
         ))}
       </div>
-    </div>
   );
 };
 
