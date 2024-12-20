@@ -22,10 +22,10 @@ const YellowSection = () => {
   const [hovered, setHovered] = useState(false);
 
   const data = [
-    { title: "КТО МЫ?", subtitle: "Мы предоставляем передовые геологоразведочные решения.", image: aboutUsImg, height: 270, link: "/aboutus" },
+    { title: "КТО МЫ?", subtitle: "Мы предоставляем передовые геологоразведочные решения.", image: aboutUsImg, height: 260, link: "/aboutus" },
     { title: "ТПИ", subtitle: "Твердые полезные ископаемые и их разведка.", image: tpi, height: 300, link: "/tpi" },
-    { title: "ЭКСПЕРТИЗА", subtitle: "Профессиональная оценка и рекомендации.", image: ex, height: 330, link: "/ex" },
-    { title: "ПАРТНЕРСТВО", subtitle: "Совместное развитие и достижения.", image: partners, height: 350, link: "/partners" },
+    { title: "ЭКСПЕРТИЗА", subtitle: "Профессиональная оценка и рекомендации.", image: ex, height: 270, link: "/ex" },
+    { title: "ПАРТНЕРСТВО", subtitle: "Совместное развитие и достижения.", image: partners, height: 290, link: "/partners" },
     { title: "КОНСАЛТИНГ", subtitle: "Консультации по разработке и геологоразведке.", image: cons, height: 300, link: "/cons" },
     { title: "МЕДИА", subtitle: "Новости и события нашей компании.", image: media, height: 270, link: "/media" },
   ];
@@ -108,8 +108,14 @@ const YellowSection = () => {
             className={`flex items-center space-x-2 text-white font-oswald font-medium transition-opacity duration-500 ${
               hovered ? "opacity-100" : "opacity-0"
             }`}
-            style={{ position: "absolute", top: "20px", left: "380px" }}
-          >
+            style={{
+              display: "flex",
+              justifyContent: "flex-start", // Элемент смещен влево
+              alignItems: "flex-start", // Элемент смещен вниз
+              marginLeft: "380px", // Эквивалент `left: "380px"`
+              marginTop: "20px", // Эквивалент `top: "20px"`
+              position: "relative", // Сохраняем контекст позиционирования, если нужно
+            }}          >
             <span className="text-sm uppercase">ПЕРЕЙТИ В РАЗДЕЛ</span>
           </Link>
         </div>
@@ -124,7 +130,7 @@ const YellowSection = () => {
             isPaused={isPaused}
           />
         </div>
-        <div className="p-10 w-80 absolute top-80 right-10">
+        <div className="p-10 w-80 absolute top-64 right-10">
       <h1 className="text-white text-lg font-bold font-oswald text-right mb-2 mt-2">НОВОСТИ</h1>
       <NewsTimeline news={newsData} />
     </div>
@@ -137,7 +143,7 @@ const YellowSection = () => {
       {/* Статистика - отображается только для "Кто мы?" */}
       {data[dataIndex].title === "КТО МЫ?" && (
         <div
-          className="absolute bottom-10 right-96 animate-fadeSlideUp"
+          className="absolute bottom-6 right-96 animate-fadeSlideUp"
           style={{ animationDuration: "1s" }}
         >
           <div className="absolute -top-40 -left-4">
@@ -149,7 +155,7 @@ const YellowSection = () => {
 
       {data[dataIndex].title === "ЭКСПЕРТИЗА" && (
         <div
-          className="absolute bottom-10 right-60 animate-fadeIn"
+          className="absolute bottom-20 right-60 animate-fadeIn"
           style={{ animationDuration: "1s" }}
         >
           <ExStat />
